@@ -1,0 +1,272 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+html, body{
+  height:100%;
+  overflow:hidden;
+}
+
+body{
+  color:white;
+  background:linear-gradient(180deg,#081120,#12253f,#1b365f);
+}
+
+/* ==========================
+   BACKGROUND
+========================== */
+
+#scene{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  overflow:hidden;
+}
+
+/* ==========================
+   DASHBOARD
+========================== */
+
+.dashboard{
+  width:95%;
+  max-width:1500px;
+  height:96vh;
+
+  margin:8px auto;
+  padding:10px;
+
+  border-radius:25px;
+
+  background:rgba(255,255,255,.05);
+  backdrop-filter:blur(25px);
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:0 10px 40px rgba(0,0,0,.35);
+
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+
+  overflow:hidden;
+}
+
+/* ==========================
+   TOP BAR
+========================== */
+
+.topBar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:4px;
+}
+
+/* ==========================
+   SEARCH
+========================== */
+
+.searchSection{
+  display:flex;
+  gap:8px;
+}
+
+.searchSection input{
+  flex:1;
+  padding:10px;
+  border:none;
+  outline:none;
+  border-radius:12px;
+}
+
+.searchSection button{
+  width:50px;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.heroPanel{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+/* ==========================
+   STATS
+========================== */
+
+.statsGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:6px;
+}
+
+/* ==========================
+   AQI + UV
+========================== */
+
+.advancedGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+
+/* ==========================
+   FORECAST
+========================== */
+
+.forecastContainer{
+  display:flex;
+  gap:8px;
+  overflow:hidden;
+}
+
+.forecastCard{
+  min-width:90px;
+  padding:6px;
+  border-radius:10px;
+  background:rgba(255,255,255,.08);
+  text-align:center;
+}
+
+/* ==========================
+   MAP
+========================== */
+
+.mapPanel{
+  padding:10px;
+  border-radius:12px;
+  background:rgba(255,255,255,.06);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+  .heroPanel{
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .statsGrid{
+    grid-template-columns:1fr;
+  }
+
+  .advancedGrid{
+    grid-template-columns:1fr;
+  }
+}
+/* ======================
+   REALISTIC SUN
+====================== */
+
+.sun{
+    position:absolute;
+    top:60px;
+    right:120px;
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+        #fff9c4 0%,
+        #ffe082 35%,
+        #ffca28 70%,
+        rgba(255,202,40,0.1) 100%);
+
+    box-shadow:
+        0 0 40px #ffd54f,
+        0 0 80px #ffca28,
+        0 0 120px rgba(255,202,40,.8);
+
+    animation:pulseSun 4s infinite ease-in-out;
+}
+
+@keyframes pulseSun{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.08);
+    }
+}
+.cloud{
+    position:absolute;
+
+    width:180px;
+    height:60px;
+
+    background:rgba(255,255,255,.8);
+
+    border-radius:50px;
+
+    filter:blur(2px);
+
+    opacity:.8;
+}
+
+.cloud::before,
+.cloud::after{
+    content:'';
+    position:absolute;
+    background:rgba(255,255,255,.9);
+    border-radius:50%;
+}
+
+.cloud::before{
+    width:80px;
+    height:80px;
+    top:-35px;
+    left:25px;
+}
+
+.cloud::after{
+    width:100px;
+    height:100px;
+    top:-50px;
+    right:20px;
+}
+
+.cloud1{
+    top:100px;
+    left:-250px;
+    animation:moveClouds 40s linear infinite;
+}
+
+.cloud2{
+    top:220px;
+    left:-300px;
+    transform:scale(.8);
+    animation:moveClouds 55s linear infinite;
+}
+
+.cloud3{
+    top:320px;
+    left:-350px;
+    transform:scale(1.2);
+    animation:moveClouds 65s linear infinite;
+}
+
+@keyframes moveClouds{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(1800px);
+    }
+}

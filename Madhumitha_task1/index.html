@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Weather App</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+
+<div id="scene">
+<div id="scene">
+    <div class="sun"></div>
+
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+</div>    
+
+<div id="skyGlow"></div>
+
+<div id="sun"></div>
+
+<div id="moon"></div>
+
+<div id="stars"></div>
+
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+<div class="cloud cloud3"></div>
+<div class="cloud cloud4"></div>
+
+<div id="rainContainer"></div>
+
+<div id="snowContainer"></div>
+
+<div id="lightning"></div>
+
+</div>
+
+<!-- MAIN DASHBOARD -->
+
+<div class="dashboard">
+
+<!-- TOP BAR -->
+
+<div class="topBar">
+
+<div>
+
+<h1 class="logo">
+WEATHER APP
+</h1>
+
+<p class="tagline">
+Real-Time Atmospheric Intelligence
+</p>
+
+</div>
+
+<div class="liveInfo">
+
+<div id="liveTime">
+00:00:00
+</div>
+
+<div id="liveDate">
+Loading...
+</div>
+
+</div>
+
+</div>
+
+<!-- SEARCH -->
+
+<div class="searchSection">
+
+<input
+type="text"
+id="cityInput"
+placeholder="Search any city...">
+
+<button id="searchBtn">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+</button>
+
+<button id="locationBtn">
+
+<i class="fa-solid fa-location-crosshairs"></i>
+
+</button>
+
+</div>
+
+<!-- CURRENT WEATHER -->
+
+<div class="heroPanel">
+
+<div class="heroLeft">
+
+<div id="weatherIcon">
+
+</div>
+
+<div>
+
+<h2 id="cityName">
+
+Loading...
+
+</h2>
+
+<p id="countryName">
+
+Location
+
+</p>
+
+</div>
+
+</div>
+
+<div class="heroRight">
+
+<h1 id="temperature">
+
+--°C
+
+</h1>
+
+<p id="weatherCondition">
+
+Loading Weather...
+
+</p>
+
+<p id="feelsLike">
+
+Feels Like --°C
+
+</p>
+
+</div>
+
+</div>
+
+<!-- STATS -->
+
+<div class="statsGrid">
+
+<div class="statCard">
+
+<i class="fa-solid fa-droplet"></i>
+
+<h3>Humidity</h3>
+
+<p id="humidity">
+
+--
+
+</p>
+
+</div>
+
+<div class="statCard">
+
+<i class="fa-solid fa-wind"></i>
+
+<h3>Wind</h3>
+
+<p id="wind">
+
+--
+
+</p>
+
+</div>
+
+<div class="statCard">
+
+<i class="fa-solid fa-eye"></i>
+
+<h3>Visibility</h3>
+
+<p id="visibility">
+
+--
+
+</p>
+
+</div>
+
+<div class="statCard">
+
+<i class="fa-solid fa-gauge-high"></i>
+
+<h3>Pressure</h3>
+
+<p id="pressure">
+
+--
+
+</p>
+
+</div>
+
+<div class="statCard">
+
+<i class="fa-solid fa-sun"></i>
+
+<h3>Sunrise</h3>
+
+<p id="sunrise">
+
+--
+
+</p>
+
+</div>
+
+<div class="statCard">
+
+<i class="fa-solid fa-moon"></i>
+
+<h3>Sunset</h3>
+
+<p id="sunset">
+
+--
+
+</p>
+
+</div>
+
+</div>
+
+<!-- AQI + UV -->
+
+<div class="advancedGrid">
+
+<div class="advancedCard">
+
+<h2>Air Quality Index</h2>
+
+<h1 id="aqi">
+
+--
+
+</h1>
+
+<p id="aqiText">
+
+Loading...
+
+</p>
+
+</div>
+
+<div class="advancedCard">
+
+<h2>UV Index</h2>
+
+<h1 id="uvIndex">
+
+--
+
+</h1>
+
+<p id="uvText">
+
+Loading...
+
+</p>
+
+</div>
+
+</div>
+
+<!-- FORECAST -->
+
+<div class="forecastSection">
+
+<h2>
+
+7 Day Forecast
+
+</h2>
+
+<div class="forecastContainer">
+
+<div class="forecastCard"></div>
+<div class="forecastCard"></div>
+<div class="forecastCard"></div>
+<div class="forecastCard"></div>
+<div class="forecastCard"></div>
+<div class="forecastCard"></div>
+<div class="forecastCard"></div>
+
+</div>
+
+</div>
+
+<!-- WEATHER MAP PANEL -->
+
+<div class="mapPanel">
+
+<h2>
+
+Atmospheric Data Panel
+
+</h2>
+
+<div class="mapPlaceholder">
+
+LIVE WEATHER DATA STREAM
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

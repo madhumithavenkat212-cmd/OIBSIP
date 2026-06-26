@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CYBER AI CHATBOT</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- MATRIX BACKGROUND -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <div class="main-container">
+
+        <!-- HEADER -->
+        <div class="header">
+            <h1>⚡ CYBER AI CHATBOT ⚡</h1>
+            <p class="typing-text"></p>
+        </div>
+
+        <!-- LIVE CLOCK -->
+        <div class="clock-box">
+            <span id="clock"></span>
+        </div>
+
+        <!-- CHAT CONTAINER -->
+        <div class="chat-container">
+
+            <!-- TERMINAL HEADER -->
+            <div class="terminal-header">
+
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+
+                <span class="terminal-title">
+                    root@cyber-ai:~$
+                </span>
+
+            </div>
+
+            <!-- CHAT AREA -->
+            <div id="chat-box">
+
+                <div class="bot-message">
+                    <span class="bot-tag">CYBER AI</span>
+                    Hello! I am Cyber AI. Ask me anything.
+                </div>
+
+            </div>
+
+            <!-- INPUT AREA -->
+            <div class="input-area">
+
+                <input type="text"
+                       id="user-input"
+                       placeholder="Enter your message...">
+
+                <button id="send-btn">
+                    SEND
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- STATUS PANEL -->
+        <div class="status-panel">
+
+            <h2>System Status</h2>
+
+            <div class="status-item">
+                AI Engine : <span>ONLINE</span>
+            </div>
+
+            <div class="status-item">
+                Firewall : <span>ACTIVE</span>
+            </div>
+
+            <div class="status-item">
+                Security Level : <span>MAXIMUM</span>
+            </div>
+
+            <div class="status-item">
+                Threat Detection : <span>ENABLED</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='matrix.js') }}"></script>
+
+</body>
+
+</html>

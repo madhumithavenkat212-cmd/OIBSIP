@@ -142,7 +142,7 @@ OIBSIP/
 
 Clone the repository:
 
-git clone https://github.com/your-username/OIBSIP.git
+git clone
 
 Navigate to the project directory:
 
